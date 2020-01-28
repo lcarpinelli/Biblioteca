@@ -13,7 +13,6 @@ namespace Biblioteca.Model
         private int id;
         private Utente utente; // utente che ha in prestito il libro, se NULL è Libero
 
-
         public Libro(string titolo, int id)
         {
             this.titolo = titolo;
@@ -30,13 +29,13 @@ namespace Biblioteca.Model
         {
             if (utente == null)
             {
-                Console.WriteLine($"Il libro {titolo} viene assegnato a {richiedente.nome}");
+                Console.WriteLine($"Il libro {titolo} viene assegnato a {richiedente.Nome}");
                 utente = richiedente;
                 richiedente.contatore = +1;
             }
             else
             {
-                Console.WriteLine($"Mi dispiace {richiedente.nome} Il libro {titolo} è gia assegnato a {utente.nome}");
+                Console.WriteLine($"Mi dispiace {richiedente.Nome} Il libro {titolo} è gia assegnato a {utente.Nome}");
             }
         }
 
@@ -48,7 +47,7 @@ namespace Biblioteca.Model
         {
             if (utente == restituitore)
             {
-                Console.WriteLine($"Il libro {titolo} è stato riconsegnato da {restituitore.nome}");
+                Console.WriteLine($"Il libro {titolo} è stato riconsegnato da {restituitore.Nome}");
                 restituitore.contatore--;
                 utente = null;
             }

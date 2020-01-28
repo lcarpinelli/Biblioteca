@@ -18,6 +18,7 @@ namespace Biblioteca
             lib.restituzioneLibro(cliente1);
             cliente1.numeroDiLibri();
             lib.assegnaLibro(cliente2);
+            Console.WriteLine(cliente1.Descrizione);
         }
 
     }
