@@ -8,26 +8,20 @@ namespace Biblioteca.Model
     {
         internal string nome;
         internal string cognome;
+        internal int contatore;
 
         public Utente(string nome, string cognome)
         {
             this.nome = nome;
             this.cognome = cognome;
+            this.contatore = 0;
         }
 
-        public static void getBook()
+        public void numeroDiLibri()
         {
-            Console.WriteLine("Inserisci il tuo nome: ");
-            string nome = Console.ReadLine();
-            Console.WriteLine("Inserisci il tuo cognome: ");
-            string cognome = Console.ReadLine();
-            Utente ut = new Utente(nome, cognome);
-            Console.WriteLine("Quale id vuoi prendere: ");
-            string id = Console.ReadLine();
-
-
+            Console.WriteLine($"{nome} ha {contatore} Libri");
         }
 
-
+      
     }
 }

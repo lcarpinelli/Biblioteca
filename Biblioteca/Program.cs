@@ -9,15 +9,15 @@ namespace Biblioteca
 
         static void Main(string[] args)
         {
-            //Console.WriteLine("Inserisci il titolo del libro: ");
-            //string titolo = Console.ReadLine();
-            //Console.WriteLine("Inserisci il numero del libro: ");
-            //int numero = Convert.ToInt32(Console.ReadLine());
             Libro lib = new Libro("ABCD", 1);
-            Utente u = new Utente("Mario", "Rossi");
-            lib.assegnaLibro(u);
-            Console.WriteLine(lib);
-
+            Utente cliente1 = new Utente("Mario", "Rossi");
+            Utente cliente2 = new Utente("Marco", "Bianchi");
+            lib.assegnaLibro(cliente1);
+            lib.assegnaLibro(cliente2);
+            cliente1.numeroDiLibri();
+            lib.restituzioneLibro(cliente1);
+            cliente1.numeroDiLibri();
+            lib.assegnaLibro(cliente2);
         }
 
     }
